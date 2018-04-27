@@ -1,0 +1,58 @@
+﻿@model WebApplication.Models.Visit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Visit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient.Comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Research.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Research.Comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VisitID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebApplication.Models.StatisticalSettings>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AnagenAll)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelogenAll)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnagenTerm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelogenTerm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnagenVallus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelogenVallus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnagenAll)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelogenAll)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnagenTerm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelogenTerm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnagenVallus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelogenVallus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StatisticalSettingsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StatisticalSettingsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StatisticalSettingsID })
+        </td>
+    </tr>
+}
+
+</table>

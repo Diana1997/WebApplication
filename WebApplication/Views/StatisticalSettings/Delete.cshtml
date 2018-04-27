@@ -1,0 +1,72 @@
+﻿@model WebApplication.Models.StatisticalSettings
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StatisticalSettings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AnagenAll)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnagenAll)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelogenAll)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelogenAll)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnagenTerm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnagenTerm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelogenTerm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelogenTerm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnagenVallus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnagenVallus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelogenVallus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelogenVallus)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

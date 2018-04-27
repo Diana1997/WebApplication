@@ -46,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -142,10 +148,55 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CommentOnTheVisitsController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\DiagnosticsController.cs" />
+    <Compile Include="Controllers\FieldOptionsController.cs" />
+    <Compile Include="Controllers\HairController.cs" />
+    <Compile Include="Controllers\HairSizeSettingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImagesController.cs" />
+    <Compile Include="Controllers\LensesController.cs" />
+    <Compile Include="Controllers\PatientsController.cs" />
+    <Compile Include="Controllers\PicturesController.cs" />
+    <Compile Include="Controllers\ReportFieldsController.cs" />
+    <Compile Include="Controllers\ResearchesController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\StatisticalSettingsController.cs" />
+    <Compile Include="Controllers\Users1Controller.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\VisitsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804271426090_First Migration.cs" />
+    <Compile Include="Migrations\201804271426090_First Migration.Designer.cs">
+      <DependentUpon>201804271426090_First Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\CommentOnTheVisit.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Diagnostic.cs" />
+    <Compile Include="Models\FieldOption.cs" />
+    <Compile Include="Models\FieldType.cs" />
+    <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\Hair.cs" />
+    <Compile Include="Models\HairSizeSettings.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\Lens.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\PatientStatus.cs" />
+    <Compile Include="Models\Picture.cs" />
+    <Compile Include="Models\ReportField.cs" />
+    <Compile Include="Models\Research.cs" />
+    <Compile Include="Models\ResearchType.cs" />
+    <Compile Include="Models\Setting.cs" />
+    <Compile Include="Models\StateOfTheResearch.cs" />
+    <Compile Include="Models\StatisticalSettings.cs" />
+    <Compile Include="Models\TypeOfComment.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -185,10 +236,94 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\CommentOnTheVisits\Create.cshtml" />
+    <Content Include="Views\CommentOnTheVisits\Delete.cshtml" />
+    <Content Include="Views\CommentOnTheVisits\Details.cshtml" />
+    <Content Include="Views\CommentOnTheVisits\Edit.cshtml" />
+    <Content Include="Views\CommentOnTheVisits\Index.cshtml" />
+    <Content Include="Views\Contacts\Create.cshtml" />
+    <Content Include="Views\Contacts\Delete.cshtml" />
+    <Content Include="Views\Contacts\Details.cshtml" />
+    <Content Include="Views\Contacts\Edit.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\Diagnostics\Create.cshtml" />
+    <Content Include="Views\Diagnostics\Delete.cshtml" />
+    <Content Include="Views\Diagnostics\Details.cshtml" />
+    <Content Include="Views\Diagnostics\Edit.cshtml" />
+    <Content Include="Views\Diagnostics\Index.cshtml" />
+    <Content Include="Views\FieldOptions\Create.cshtml" />
+    <Content Include="Views\FieldOptions\Delete.cshtml" />
+    <Content Include="Views\FieldOptions\Details.cshtml" />
+    <Content Include="Views\FieldOptions\Edit.cshtml" />
+    <Content Include="Views\FieldOptions\Index.cshtml" />
+    <Content Include="Views\Hair\Create.cshtml" />
+    <Content Include="Views\Hair\Delete.cshtml" />
+    <Content Include="Views\Hair\Details.cshtml" />
+    <Content Include="Views\Hair\Edit.cshtml" />
+    <Content Include="Views\Hair\Index.cshtml" />
+    <Content Include="Views\HairSizeSettings\Create.cshtml" />
+    <Content Include="Views\HairSizeSettings\Delete.cshtml" />
+    <Content Include="Views\HairSizeSettings\Details.cshtml" />
+    <Content Include="Views\HairSizeSettings\Edit.cshtml" />
+    <Content Include="Views\HairSizeSettings\Index.cshtml" />
+    <Content Include="Views\Images\Create.cshtml" />
+    <Content Include="Views\Images\Delete.cshtml" />
+    <Content Include="Views\Images\Details.cshtml" />
+    <Content Include="Views\Images\Edit.cshtml" />
+    <Content Include="Views\Images\Index.cshtml" />
+    <Content Include="Views\Lenses\Create.cshtml" />
+    <Content Include="Views\Lenses\Delete.cshtml" />
+    <Content Include="Views\Lenses\Details.cshtml" />
+    <Content Include="Views\Lenses\Edit.cshtml" />
+    <Content Include="Views\Lenses\Index.cshtml" />
+    <Content Include="Views\Patients\Create.cshtml" />
+    <Content Include="Views\Patients\Delete.cshtml" />
+    <Content Include="Views\Patients\Details.cshtml" />
+    <Content Include="Views\Patients\Edit.cshtml" />
+    <Content Include="Views\Patients\Index.cshtml" />
+    <Content Include="Views\Pictures\Create.cshtml" />
+    <Content Include="Views\Pictures\Delete.cshtml" />
+    <Content Include="Views\Pictures\Details.cshtml" />
+    <Content Include="Views\Pictures\Edit.cshtml" />
+    <Content Include="Views\Pictures\Index.cshtml" />
+    <Content Include="Views\ReportFields\Create.cshtml" />
+    <Content Include="Views\ReportFields\Delete.cshtml" />
+    <Content Include="Views\ReportFields\Details.cshtml" />
+    <Content Include="Views\ReportFields\Edit.cshtml" />
+    <Content Include="Views\ReportFields\Index.cshtml" />
+    <Content Include="Views\Researches\Create.cshtml" />
+    <Content Include="Views\Researches\Delete.cshtml" />
+    <Content Include="Views\Researches\Details.cshtml" />
+    <Content Include="Views\Researches\Edit.cshtml" />
+    <Content Include="Views\Researches\Index.cshtml" />
+    <Content Include="Views\Settings\Create.cshtml" />
+    <Content Include="Views\Settings\Delete.cshtml" />
+    <Content Include="Views\Settings\Details.cshtml" />
+    <Content Include="Views\Settings\Edit.cshtml" />
+    <Content Include="Views\Settings\Index.cshtml" />
+    <Content Include="Views\StatisticalSettings\Create.cshtml" />
+    <Content Include="Views\StatisticalSettings\Delete.cshtml" />
+    <Content Include="Views\StatisticalSettings\Details.cshtml" />
+    <Content Include="Views\StatisticalSettings\Edit.cshtml" />
+    <Content Include="Views\StatisticalSettings\Index.cshtml" />
+    <Content Include="Views\Users1\Create.cshtml" />
+    <Content Include="Views\Users1\Delete.cshtml" />
+    <Content Include="Views\Users1\Details.cshtml" />
+    <Content Include="Views\Users1\Edit.cshtml" />
+    <Content Include="Views\Users1\Index.cshtml" />
+    <Content Include="Views\Visits\Create.cshtml" />
+    <Content Include="Views\Visits\Delete.cshtml" />
+    <Content Include="Views\Visits\Details.cshtml" />
+    <Content Include="Views\Visits\Edit.cshtml" />
+    <Content Include="Views\Visits\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -202,6 +337,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804271426090_First Migration.resx">
+      <DependentUpon>201804271426090_First Migration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

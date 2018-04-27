@@ -1,0 +1,114 @@
+﻿@model WebApplication.Models.Research
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Research</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Diagnostic.DiagnosticText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diagnostic.DiagnosticText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hair.HairID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hair.HairID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lens.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lens.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResearchType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResearchType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateOfTheResearch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateOfTheResearch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thumbnail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thumbnail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResearchArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResearchArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResearchTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResearchTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Treatment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Treatment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SettingID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SettingID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ResearchID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

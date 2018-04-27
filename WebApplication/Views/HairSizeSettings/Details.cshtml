@@ -1,0 +1,58 @@
+﻿@model WebApplication.Models.HairSizeSettings
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HairSizeSettings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LengthOfTelogenHair)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LengthOfTelogenHair)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiameterOfVelusTerminal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiameterOfVelusTerminal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiameterOfTerminalsThinMedium)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiameterOfTerminalsThinMedium)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiameterOfTerminalsMediumThick)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiameterOfTerminalsMediumThick)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RadiusOfFollicularUnits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RadiusOfFollicularUnits)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HairSizeSettingsID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

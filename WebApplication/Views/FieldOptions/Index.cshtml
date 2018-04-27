@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebApplication.Models.FieldOption>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Selected)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Selected)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FieldOptionID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FieldOptionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FieldOptionID })
+        </td>
+    </tr>
+}
+
+</table>

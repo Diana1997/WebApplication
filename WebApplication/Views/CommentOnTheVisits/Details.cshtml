@@ -1,0 +1,34 @@
+﻿@model WebApplication.Models.CommentOnTheVisit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CommentOnTheVisit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfComment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfComment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CommentOnTheVisitID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

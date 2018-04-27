@@ -1,0 +1,64 @@
+﻿@model WebApplication.Models.HairSizeSettings
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>HairSizeSettings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LengthOfTelogenHair)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LengthOfTelogenHair)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiameterOfVelusTerminal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiameterOfVelusTerminal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiameterOfTerminalsThinMedium)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiameterOfTerminalsThinMedium)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiameterOfTerminalsMediumThick)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiameterOfTerminalsMediumThick)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RadiusOfFollicularUnits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RadiusOfFollicularUnits)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

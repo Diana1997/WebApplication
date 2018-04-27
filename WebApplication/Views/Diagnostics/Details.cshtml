@@ -1,0 +1,50 @@
+﻿@model WebApplication.Models.Diagnostic
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Diagnostic</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DiagnosticText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiagnosticText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfLastConfirmation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfLastConfirmation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DiagnosticID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

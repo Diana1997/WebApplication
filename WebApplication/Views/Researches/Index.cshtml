@@ -1,0 +1,99 @@
+﻿@model IEnumerable<WebApplication.Models.Research>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Diagnostic.DiagnosticText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hair.HairID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lens.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResearchType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StateOfTheResearch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thumbnail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResearchArea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResearchTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Treatment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SettingID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diagnostic.DiagnosticText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hair.HairID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lens.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResearchType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateOfTheResearch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thumbnail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResearchArea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResearchTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Treatment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SettingID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ResearchID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ResearchID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ResearchID })
+        </td>
+    </tr>
+}
+
+</table>
